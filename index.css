@@ -34,7 +34,7 @@ body {
 }
 
 .character-toggle {
-    height: 300px;
+    height: 200px;
     border: 5px solid transparent;
     border-radius: 8px;
     overflow: hidden;
@@ -62,7 +62,7 @@ body {
 
 .settings-wrapper {
     margin-bottom: 20px;
-    padding: 0px 40px;
+    padding: 0px 10px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
