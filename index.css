@@ -1,0 +1,494 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background-color: rgb(12, 46, 69); */
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.page {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.characters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 220px;
+}
+
+.character-img {
+    height: 100%;
+}
+
+.character-cont {
+    margin: 20px;
+}
+
+.character-toggle {
+    height: 300px;
+    border: 5px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.active {
+    /* border: 5px solid rgb(166, 184, 197); */
+    box-shadow: 0 6px 35px -5px rgba(255, 255, 255, 0.668), 0 4px 25px -4px rgb(255, 0, 0);
+
+}
+
+.controls {
+    background-color: #000000;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* justify-content: space-evenly; */
+}
+
+.controls button {
+    padding: 20px
+}
+
+.settings-wrapper {
+    margin-bottom: 20px;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.319), 0 2px 4px -1px rgba(255, 255, 255, 0.281);
+}
+
+.settings-wrapper h2 {
+    margin: 20px;
+}
+
+.settings-input-wrapper {
+    margin: 20px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    border: 0 solid #000000;
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.319), 0 2px 4px -1px rgba(255, 255, 255, 0.281);
+    box-sizing: border-box;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content span {
+    border-radius: 8px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content span:hover {
+    background-color: #2a2a2a;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+.page span {
+    color: white;
+}
+
+
+
+
+/* CSS */
+.button-59 {
+    align-items: center;
+    background-color: #000000;
+    border: 2px solid #3f3f3f;
+    /* border: none; */
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #ffffff;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-59:focus {
+    color: #bcbcbc;
+}
+
+.button-59:hover {
+    border-color: rgb(189, 189, 189);
+    color: rgb(189, 189, 189);
+    fill: rgb(189, 189, 189);
+}
+
+.button-59:active {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+@media (min-width: 768px) {
+    .button-59 {
+        min-width: 170px;
+    }
+}
+
+/* CSS */
+.button-47 {
+    align-items: center;
+    background: #000000;
+    border: 0 solid #000000;
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.319), 0 2px 4px -1px rgba(255, 255, 255, 0.281);
+    box-sizing: border-box;
+    color: #ffffff;
+    display: inline-flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 56px;
+    justify-content: center;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    padding: 24px;
+    text-decoration: none;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: all .3s;
+}
+
+.button-47:hover,
+.button-47:focus {
+    box-shadow: 0 4px 6px -1px rgba(195, 195, 195, 0.605), 0 2px 4px -1px rgba(255, 255, 255, 0.43);
+}
+
+.footer .gradient {
+    height: 56px;
+    background-image: linear-gradient(to top,
+            hsl(0, 0%, 0%) 0%,
+            hsla(0, 0%, 0%, 0.987) 8%,
+            hsla(0, 0%, 0%, 0.951) 15.2%,
+            hsla(0, 0%, 0%, 0.896) 21.7%,
+            hsla(0, 0%, 0%, 0.825) 27.8%,
+            hsla(0, 0%, 0%, 0.741) 33.5%,
+            hsla(0, 0%, 0%, 0.648) 38.9%,
+            hsla(0, 0%, 0%, 0.55) 44.3%,
+            hsla(0, 0%, 0%, 0.45) 49.7%,
+            hsla(0, 0%, 0%, 0.352) 55.3%,
+            hsla(0, 0%, 0%, 0.259) 61.2%,
+            hsla(0, 0%, 0%, 0.175) 67.5%,
+            hsla(0, 0%, 0%, 0.104) 74.4%,
+            hsla(0, 0%, 0%, 0.049) 82.1%,
+            hsla(0, 0%, 0%, 0.013) 90.5%,
+            hsla(0, 0%, 0%, 0) 100%);
+
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.controls .btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.range-slider {
+    display: inline-block;
+    margin: 20px 20px;
+}
+
+.rs-range {
+    margin-top: 19px;
+    width: 300px;
+    height: 4px;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        box-shadow: none;
+        background: #ffffff;
+        border-radius: 0px;
+        border: 0px solid #010101;
+    }
+
+    &::-moz-range-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        box-shadow: none;
+        background: #ffffff;
+        border-radius: 0px;
+        border: 0px solid #010101;
+    }
+
+    &::-webkit-slider-thumb {
+        box-shadow: none;
+        border: 0px solid #ffffff;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        height: 42px;
+        width: 22px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 1);
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -20px;
+    }
+
+    &::-moz-range-thumb {
+        box-shadow: none;
+        border: 0px solid #ffffff;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        height: 42px;
+        width: 22px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 1);
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -20px;
+    }
+
+    &::-moz-focus-outer {
+        border: 0;
+    }
+}
+
+.rs-label {
+
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 12px;
+    box-sizing: border-box;
+    border: 0px solid #fff;
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.319), 0 2px 4px -1px rgba(255, 255, 255, 0.281);
+    margin-left: -14px;
+    left: attr(value);
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+
+    &::after {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.07em;
+        margin-top: -2px;
+    }
+
+}
+
+.rs-label.percent {
+    &::after {
+        content: "%";
+    }
+}
+
+.rs-label.minutes {
+    &::after {
+        content: "min";
+    }
+}
+
+.rs-label.seconds {
+    &::after {
+        content: "sec";
+    }
+}
+
+.checkbox-wrapper-28 {
+    --size: 50px;
+    position: relative;
+}
+
+.checkbox-wrapper-28 *,
+.checkbox-wrapper-28 *:before,
+.checkbox-wrapper-28 *:after {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-28 .promoted-input-checkbox {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.checkbox-wrapper-28 input:checked~svg {
+    height: calc(var(--size) * 0.6);
+    -webkit-animation: draw-checkbox-28 ease-in-out 0.2s forwards;
+    animation: draw-checkbox-28 ease-in-out 0.2s forwards;
+}
+
+/* .checkbox-wrapper-28 label:active::after {
+    background-color: #e6e6e6;
+} */
+
+.checkbox-wrapper-28 label {
+    color: #0080d3;
+    line-height: var(--size);
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-wrapper-28 label:after {
+    content: "";
+    height: var(--size);
+    width: var(--size);
+    margin-right: 8px;
+    float: left;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.319), 0 2px 4px -1px rgba(255, 255, 255, 0.281);
+
+    border: 1px solid #bbbbbb72;
+    border-radius: 8px;
+    transition: 0.15s all ease-out;
+}
+
+.checkbox-wrapper-28 svg {
+    stroke: #ffffff;
+    stroke-width: 3px;
+    height: 0;
+    width: calc(var(--size) * 0.6);
+    position: absolute;
+    left: calc(var(--size) * 0.21);
+    top: calc(var(--size) * 0.2);
+    stroke-dasharray: 33;
+}
+
+@-webkit-keyframes draw-checkbox-28 {
+    0% {
+        stroke-dashoffset: 33;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-checkbox-28 {
+    0% {
+        stroke-dashoffset: 33;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+}
+
+.night-wrapper {
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation-cont {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation-img {
+    position: absolute;
+    width: 30vw;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.animation-show {
+    opacity: 1;
+}
+
+.final.animation-img {
+    transition: all 3s;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <title>Werwölfe</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
+            integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="home page">
+                <div class="characters">
+                    <div class="character-cont" id="doppelgaengerin">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/doppelgaengerin.png" alt="DOPPELGÄNGERIN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="werwolf-1">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/werwolf.png" alt="WERWOLF" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="werwolf-2">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/werwolf.png" alt="WERWOLF" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="guenstling">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/guenstling.png" alt="GÜNSTLING" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="freimaurer-1">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/freimaurer.png" alt="FREIMAURER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="freimaurer-2">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/freimaurer.png" alt="FREIMAURER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="seherin">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/seherin.png" alt="SEHERIN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="raeuber">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/raeuber.png" alt="RÄUBER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="unruhestifterin">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/unruhestifterin.png" alt="UNRUHESTIFTERIN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="betrunkener">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/betrunkener.png" alt="BETRUNKENER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="schlaflose">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/schlaflose.png" alt="SCHLAFLOSE" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="dorfbewohner-1">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/dorfbewohner.png" alt="DORFBEWOHNER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="dorfbewohner-2">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/dorfbewohner.png" alt="DORFBEWOHNER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="dorfbewohner-3">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/dorfbewohner.png" alt="DORFBEWOHNER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="jaeger">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/jaeger.png" alt="JÄGER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="gerber">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/gerber.png" alt="GERBER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="erbin-1">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/erbin.png" alt="ERBIN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="erbin-2">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/erbin.png" alt="ERBIN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="blutruenstige">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/blutruenstige.png" alt="BLUTRUENSTIGE" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="prinzessin">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/prinzessin.png" alt="PRINZESSIN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="taschendiebin">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/tachendiebin.png" alt="TASCHENDIEBEN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="SCHENKERIN">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/schenkerin.png" alt="SCHENKERIN" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="parasit">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/parasit.png" alt="PARASIT" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="bekiffter">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/bekiffter.png" alt="BEKIFFTER" class="character-img" />
+                        </div>
+                    </div>
+                    <div class="character-cont" id="unguenstling">
+                        <div class="character-toggle">
+                            <img src="./src/imgs/char_portraits/unguenstling.png" alt="UNGUENSTLING" class="character-img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="gradient"></div>
+                    <div class="controls">
+                        <div class="btn-wrapper"><button class="button-47 start">TIMER</button></div>
+                        <div class="btn-wrapper"><button class="button-47 navigate-settings">EINSTELLUNGEN</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SETTINGS -->
+
+            <div class="settings page">
+                <div class="settings-menu">
+                    <div class="settings-wrapper">
+                        <h2>ERZÄHLSTIMME</h2>
+                        <div class="settings-input-wrapper">
+                            <div class="dropdown narrator">
+                                <button class="dropbtn button-47 chosen-setting">CARMEN</button>
+                                <div class="dropdown-content">
+                                    <span id="carmen">CARMEN</span>
+                                </div>
+                            </div>
+
+                            <div class="range-slider narrator">
+                                <span class="rs-label percent">0</span>
+                                <input class="rs-range" type="range" value="100" min="0" max="100" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-wrapper">
+                        <h2>HINTERGRUNDGERÄUSCHE</h2>
+                        <div class="settings-input-wrapper">
+                            <div class="dropdown background">
+                                <button class="dropbtn button-47 chosen-setting">SHIDUDAWU</button>
+                                <div class="dropdown-content background">
+                                    <span id="keine">KEINE</span>
+                                    <span id="shidudawa">SHIDUDAWA</span>
+                                    <span id="shidudawe">SHIDUDAWE</span>
+                                    <span id="shidudawi">SHIDUDAWI</span>
+                                    <span id="shidudawo">SHIDUDAWO</span>
+                                    <span id="shidudawu">SHIDUDAWU</span>
+                                    <span id="regensburger_dult">REGENSBURGER DULT</span>
+                                    <span id="stimmen">440 HZ</span>
+                                </div>
+                            </div>
+
+                            <div class="range-slider background">
+                                <span class="rs-label percent">0</span>
+                                <input class="rs-range" type="range" value="50" min="0" max="100" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-wrapper">
+                        <h2>DISKUSSIONSZEIT</h2>
+                        <div class="settings-input-wrapper">
+                            <div class="range-slider voting-timer">
+                                <span class="rs-label minutes">0</span>
+                                <input class="rs-range" type="range" value="5" min="0" max="10" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-wrapper">
+                        <h2>ZEIT FÜR NACHTAKTIONEN</h2>
+                        <div class="settings-input-wrapperr">
+                            <div class="range-slider action-timer">
+                                <span class="rs-label seconds">0</span>
+                                <input class="rs-range" type="range" value="10" min="0" max="30" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-wrapper">
+                        <h2>DOPPELTE LÄNGE FÜR KOMPLEXE ROLLEN</h2>
+                        <div class="settings-input-wrapper">
+                            <div class="check">
+                                <div class="checkbox-wrapper-28">
+                                    <input id="tmp-28" type="checkbox" class="promoted-input-checkbox" checked />
+                                    <svg>
+                                        <use xlink:href="#checkmark-28" />
+                                    </svg>
+                                    <label for="tmp-28"></label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                                        <symbol id="checkmark-28" viewBox="0 0 24 24">
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-miterlimit="10"
+                                                fill="none"
+                                                d="M22.9 3.7l-15.2 16.6-6.6-7.1"
+                                            ></path>
+                                        </symbol>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrapper"><button class="button-47 navigate-home">ZURÜCK</button></div>
+                </div>
+            </div>
+            <div class="playing page">
+                <div class="night-wrapper">
+                    <h2 id="counter">NACHT</h2>
+                </div>
+                <div class="btn-wrapper bottom"><button class="button-47 navigate-home stop">STOP</button></div>
+            </div>
+            <div class="page loading visible">
+                <div class="animation-cont">
+                    <img class="animation-img" src="./src/imgs/animation/000.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/001.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/002.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/003.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/004.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/005.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/006.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/007.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/008.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/009.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/010.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/011.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/012.png" alt="" srcset="" />
+                    <img class="animation-img" src="./src/imgs/animation/013.png" alt="" srcset="" />
+                    <img class="final animation-img" src="./src/imgs/animation/014.png" alt="" srcset="" />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
