@@ -16,12 +16,24 @@ function animateNextStep(imgs, i, interval) {
     } else {
         setTimeout(() => {
             switchPage(HOME);
-        }, 5000);
+
+            animateCharactersAppearing(0);
+        }, 4000); // reset to 5000 after debugging
     }
 }
 
+function animateCharactersAppearing(i) {
+    setTimeout(() => {
+        if (i < $(".character-toggle").length) {
+            $(".character-toggle")[i].classList.remove("appearing");
+            i++;
+            animateCharactersAppearing(i);
+        }
+    }, 100);
+}
+
 $(document).ready(() => {
-    animateNextStep($(".animation-img"), 0, 1000);
+    animateNextStep($(".animation-img"), 0, 1000); // reset to 1000 after debugging
 
     let settings = {
         narrator: "carmen",
@@ -157,6 +169,7 @@ function switchPage(page) {
     $(".page.visible").each(function (i, p) {
         p.classList.remove("visible");
     });
+
     switch (page) {
         case SETTINGS:
             $(".page.settings").addClass("visible");

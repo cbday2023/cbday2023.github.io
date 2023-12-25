@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 220px;
+    margin-bottom: 170px;
 }
 
 .character-img {
@@ -38,7 +38,11 @@ body {
     border: 5px solid transparent;
     border-radius: 8px;
     overflow: hidden;
-    transition: all .3s;
+    transition: box-shadow .3s, opacity 3s;
+}
+
+.character-toggle.appearing {
+    opacity: 0;
 }
 
 @media (min-width:481px) {
@@ -60,6 +64,7 @@ body {
     padding: 20px 0;
     display: flex;
     justify-content: space-around;
+    transition: all 2s;
     /* justify-content: space-evenly; */
 }
 
@@ -255,6 +260,10 @@ body {
 .controls .btn-wrapper {
     display: flex;
     justify-content: center;
+}
+
+.controls.appearing {
+    opacity: 0;
 }
 
 .range-slider {
@@ -461,7 +470,7 @@ body {
 .btn-wrapper {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    margin: 20px 0 10px 0;
 }
 
 .bottom {
