@@ -382,7 +382,7 @@ class Narrator {
 function showSliderValue(rs, rl) {
     rl.innerHTML = rs.value;
     var bulletPosition = rs.value / rs.max;
-    const ratio = rs.getBoundingClientRect().width / (rs.getBoundingClientRect().width + rl.getBoundingClientRect().width * 0.stimm5);
+    const ratio = rs.getBoundingClientRect().width / (rs.getBoundingClientRect().width + rl.getBoundingClientRect().width * 0.45);
     rl.style.left = bulletPosition * ratio * rs.getBoundingClientRect().width + "px";
 }
 
