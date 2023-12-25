@@ -342,6 +342,7 @@ class Narrator {
         this.index = 0;
         this.delayTime = settings.actionTimer;
         this.timeOut;
+        this.complexRolesDouble = settings.complexRolesDouble;
     }
 
     async loadAudioQueue(audioQueue) {
@@ -350,10 +351,13 @@ class Narrator {
 
     advance() {
         let delay = 0;
+
         if (this.audioQueue[this.index].complexity === 0) {
             delay = 300;
-        } else {
+        } else if (this.complexRolesDouble) {
             delay = this.audioQueue[this.index].complexity * this.delayTime * 1000;
+        } else {
+            delay = this.delayTime * 1000;
         }
 
         if (this.index < this.audioQueue.length - 1) {
